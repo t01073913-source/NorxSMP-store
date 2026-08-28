@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS orders (
+ order_id TEXT PRIMARY KEY, discord_id TEXT, discord_username TEXT, ign TEXT NOT NULL,
+ rank TEXT NOT NULL, amount INTEGER NOT NULL, status TEXT NOT NULL, created_at TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS ticket_requests (
+ id INTEGER PRIMARY KEY AUTOINCREMENT, order_id TEXT NOT NULL, discord_id TEXT NOT NULL,
+ rank TEXT NOT NULL, ign TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'PENDING', created_at TEXT NOT NULL
+);
