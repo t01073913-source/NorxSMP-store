@@ -12,7 +12,7 @@ if (!TOKEN) {
 }
 
 client.once("ready", () => {
-  console.log(Bot is ready: ${client.user.tag});
+  console.log(`Bot is ready: ${client.user.tag}`);
 });
 
 client.login(TOKEN).catch((error) => {
